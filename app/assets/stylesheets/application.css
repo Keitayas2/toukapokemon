@@ -13,3 +13,158 @@
  *= require_tree .
  *= require_self
  */
+
+/* 基本のスタイリング */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* ボックスモデルを使うために必要 */
+}
+
+body {
+    background-image: url("back-ground.jpeg");
+    background-size: cover;
+    font-family: Arial, sans-serif; /* フォントを指定（適切なものに変更） */
+}
+
+#header {
+    padding: 10px 20px; /* 適切なパディングを設定 */
+    text-align: center; /* テキストを中央に配置 */
+}
+
+.main {
+    margin: 10px 20px; /* 適切なマージンを設定 */
+    display: flex;
+    flex-direction: column; /* スマートフォンでは縦にスタッキング */
+    overflow: hidden;
+}
+
+h4{
+    padding: 10px 0;
+}
+
+/* ナビゲーションメニューのスタイリング */
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* 適切なフォントサイズを設定 */
+    margin: 10px 0; /* メニューアイテム間のマージンを追加 */
+}
+
+.normal{
+    padding: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s ease-in-out; /* 色の変化をスムーズに */
+    text-decoration: underline; /* リンクに下線を表示 */
+}
+
+/* 追加のスタイリング */
+.cicle {
+    margin-right: 5px;
+    font-size: medium;
+}
+
+/* ホバー時のスタイリング（任意） */
+a:hover {
+    color: #3fa310;
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 要素を中央に配置 */
+    text-align:start; /* テキストを中央に配置 */
+    padding: 15px; /* 適切なパディングを設定（必要に応じて調整） */
+    background-color: #f2f2f2; /* フッターの背景色（任意の色に変更） */
+}
+
+#copyright {
+    font-size: small; /* Copyright文のフォントサイズ（任意のサイズに変更） */
+}
+
+/* メディアクエリ: 画面幅が 768px 以下の場合 */
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 0.9em;
+    }
+
+    .normal{
+        font-size: 0.8em;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+    .top, .bottom {
+        width: 100%; /* フル幅に広げる */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column; /* メニューを縦にスタッキング */
+        margin: 10px 0; /* 適切なマージンを設定 */
+    }
+
+    .top {
+        margin-bottom: 0px; /* サイドバーとメインコンテンツの間隔 */
+    }
+
+    .bottom {
+        margin: 5px 0; /* 適切なマージンを設定 */
+    }
+    
+    .normal{
+        padding: 0;
+    }
+    
+    .cicle {
+        margin-right: 0;
+        font-size: medium;
+    }
+    
+    .footer-text {
+        color: #333333;
+        text-align: center;
+        padding-bottom: 10px; /* フッターテキストと下のスペースを設定 */
+        font-size: 6.5px;
+    }
+
+    footer {
+        padding: 10px; /* 適切なパディングを設定（必要に応じて調整） */
+    }
+    #copyright {
+        font-size: 10px;
+    }
+}
+
+/* メディアクエリ: 画面幅が 768px 以上の場合 */
+@media screen and (min-width: 769px) {
+    .main {
+        flex-direction: row; /* スマートフォン以外は横並びにする */
+    }
+
+    .top {
+        width: 25%; /* 左側のサイドバーの幅を設定（適宜調整） */
+        margin-right: 5%; /* サイドバーとメインコンテンツの間隔 */
+    }
+
+    .bottom {
+        width: 70%; /* 右側のメインコンテンツの幅を設定（適宜調整） */
+    }
+
+    .footer-text {
+        color: #333333;
+        font-size: x-small;
+        padding-bottom: 10px; /* フッターテキストと下のスペースを設定 */
+    }
+}

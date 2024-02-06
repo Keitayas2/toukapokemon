@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Toukapokemon</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag('favicon.ico') %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <div id="header">
+    <h2><%= link_to '福岡大学ポケモンサークル トウカのもり' , root_path%></h2>
+  </div>
 
-  <body>
-    <%= yield %>
-  </body>
+  <div class="main">
+    <div class="top">
+      <!-- トウカのもり関係はここ -->
+      <h4><strong>サイト案内</strong></h4>
+      <ul class="nav-list">
+        <li class='normal'>
+          <%= link_to 'ホーム' , root_path%>
+        </li>
+        <li class='normal'>
+          <%= link_to 'サークル紹介' , touka_about_path %>
+        </li>
+        <li class='normal'>
+          <%= link_to 'メンバー紹介' , touka_member_path %>
+        </li>
+        <li class='normal'>
+          <%= link_to 'よくあるご質問' , touka_QA_path %>
+        </li>
+        <li class='normal'>
+          <%= link_to '九州ポケサー連盟' , touka_kyushu_union_path %>
+        </li>
+        <li class='normal'>
+          <%= link_to 'お問い合わせ' , touka_contact_path %>
+        </li>
+      </ul>
+
+      <!-- リンク関係はここ -->
+      <h4><strong>外部サイト</strong></h4>
+      <ul class="nav-list">
+        <li class='normal'>
+          <a href="https://twitter.com/fukudai_pokemon" target='_blank' rel='noreferrer noopener'>トウカのもり公式X</a>
+        </li>
+        <li class='normal'>
+          <a href="https://www.instagram.com/toukanomori2016/" target='_blank' rel='noreferrer noopener'>トウカのもり公式Instagram</a>
+        </li>
+        <li class='normal'>
+          <a href="https://toukanomori.hatenablog.com/about" target='_blank' rel='noreferrer noopener'>トウカのもり公式ブログ</a>
+        </li>
+        <li class='normal'>
+          <a href="https://www.pokemon.co.jp/" target='_blank' rel='noreferrer noopener'>ポケットモンスターオフィシャルサイト</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bottom">
+      <%= yield %>
+    </div>
+  </div>
+
+  <br>
+
+  <footer>
+    <span class="footer-text"> 
+      当サイトはリンクフリーとなっています。<br>
+      当サイトに関係のないサイトリンクはお断りすることがあります。<br>
+      ポケットモンスター・ポケモン・Pokemonは任天堂・クリーチャーズ・ゲームフリークの登録商標です。<br>
+      このサイトは個人（福岡大学ポケモンサークル 「トウカのもり」）によるものであり、任天堂・ゲームフリーク・株式会社ポケモンとは無関係です。<br>
+      福岡大学ポケモンサークル「トウカのもり」は「九州ポケサー連盟」加盟団体です。<br>
+      また、当サイトで使用されている写真や絵の転載等はご遠慮いただきますようお願いいたします。 
+    </span>
+
+    <div id="copyright">
+      Copyright (C) 2016 Pokemon club Fukuoka University all rights reserved.
+    </div>
+  </footer>
+</body>
 </html>

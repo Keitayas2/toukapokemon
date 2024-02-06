@@ -1,0 +1,82 @@
+/* 基本のスタイリング */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+    padding: 20px; /* 必要に応じて調整 */
+}
+
+.main-picture{
+    border-width: 5px;
+    border-style: outset;
+    border-color: whitesmoke;
+}
+
+ul {
+    color: black;
+    font-size: 0.9em;
+    padding: 1px;
+}
+
+.text{
+    padding: 25px 15px;
+}
+
+.circle { /* クラス名 "cicle" が "circle" に修正 */
+    font-size: 0.4em;
+    color: #777;
+}
+
+.main-picture img {
+    max-width: 100%; /* 親要素に収まるように */
+    height: auto;
+}
+
+/* メディアクエリ: 画面幅が 768px 以下の場合 */
+@media screen and (max-width: 768px) {
+    .main-container {
+        font-size: 1em;
+    }
+    .main-picture{
+        border-width: 5px;
+        border-style: outset;
+        border-color: whitesmoke;
+        margin-bottom: 0px;
+    }
+
+    .calendar,
+    .X,
+    .map {
+        width: 100%; /* 画面が狭い場合はフル幅に広げる */
+        margin-bottom: 20px; /* 各セクションの下に適切なマージンを追加 */
+    }
+
+    iframe {
+        width: 100%; /* iframe をフル幅に調整 */
+        height: 300px; /* 必要に応じて調整 */
+    }
+
+    .news-text {
+        font-size: 0.8em;
+        padding: 0;
+    }
+}
+
+/* メディアクエリ: 画面幅が 400px 以下の場合 */
+@media screen and (max-width: 400px) {
+    .main-container {
+        font-size: 0.6em;
+    }
+
+    .calendar,
+    .X,
+    .map {
+        width: 100%; /* 画面が狭い場合はフル幅に広げる */
+        margin-bottom: 20px; /* 各セクションの下に適切なマージンを追加 */
+    }
+
+    iframe {
+        width: 100%; /* iframe をフル幅に調整 */
+        height: 300px; /* 必要に応じて調整 */
+    }
+}
