@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>よくあるご質問</title>
+  <!-- jQuery ライブラリを読み込む -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- 期間内にのみ表示するための JavaScript コード -->
+  <script>
+    $(document).ready(function() {
+      var today = new Date();
+      var startDate = new Date('2024-01-07'); // 開始日
+      var endDate = new Date('2024-04-26');   // 終了日
+
+      if (today >= startDate && today <= endDate) {
+        // 期間内の場合、指定の要素を表示
+        $(".limited-content").show();
+      } else {
+        // 期間外の場合、指定の要素を非表示
+        $(".limited-content").hide();
+      }
+    });
+  </script>
+  <!-- スタイルシートを読み込む（必要に応じて修正）-->
+  <%= stylesheet_link_tag 'QA', media: 'all' %>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="page-title">
+        <h2><strong>よくあるご質問</strong></h2>
+    </div>
+
+    <div class="text">
+        <p>
+            よくある質問を以下にまとめました！他に何か質問があれば、<strong><%= link_to 'お問い合わせ' , touka_contact_path , class: 'new-event' %></strong>の項目よりご連絡お願いします！
+        </p>
+    </div>
+
+    <div class="contact-box">
+        <h4>Q. 対戦に詳しくないのですが、活動に参加してもよろしいですか？</h4>
+    </div>
+    <div class="text">
+        <p>
+            様々なポケモン好きの皆さんを大歓迎しています！対戦に詳しくなくても、対戦知識が全くなくても大丈夫です。大切なのは「ポケモンが好き」という気持ちです！
+        </p>
+    </div>
+
+    <div class="contact-box">
+        <h4>Q. ポケモン以外のゲームやイベントにも参加できるとのことですが、これらの活動はどのように企画されていますか？メンバーのアイデアや提案も取り入れられていますか？</h4>
+    </div>
+    <div class="text">
+        <p>
+            活動はメンバーの提案やアイデアを取り入れつつ企画されています。例えば、ゲーム大会やイベントのアイデアやルールはメンバーで話し合い、決定しています。
+            これにより、メンバー全員が楽しめるような企画を行なっています！
+        </p>
+    </div>
+
+    <!-- 期間内にのみ表示される要素 -->
+    <div class="limited-content contact-box">
+        <h4>Q. 新入生歓迎会のイベント内容について教えてください。</h4>
+    </div>
+    <div class="limited-content text">
+        <p>
+            新入生歓迎会では、4月12日(金)にポケモンSVゆびをふる大会、4月19日(金)にはタイプ統一杯、4月26日(金)にはマルチバトル大会を行います。詳細は、<strong><a href="https://toukanomori.hatenablog.com/entry/2024/01/08/230031" target='_blank' rel='noreferrer noopener' class="new-event">こちら</a></strong>をご覧ください。
+        </p>
+    </div>
+
+    <div class="contact-box">
+        <h4>Q. サークル紹介によると会費が2025年に減額される予定とのことですが本当ですか？また、その理由について教えてください！</h4>
+    </div>
+    <div class="text">
+        <p>
+            はい。会費については2025年に減額予定です。これはサークルが公認されることにより、大学内の施設を使うことができ、現在の会場である城南市民センターを借りる必要がなくなるためです。ただし、当サイトの運営費のために多少は徴収する予定です。これによりメンバー全員がより気軽に参加できる環境を目指しています。
+        </p>
+    </div>
+</div>
+</body>
+</html>

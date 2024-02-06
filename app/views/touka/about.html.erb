@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag 'about', media: 'all' %>
+  <title>サークル紹介</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var today = new Date();
+      var startDate = new Date('2024-01-12');
+      var endDate = new Date('2024-04-19');
+
+      if (today >= startDate && today <= endDate) {
+        $(".limited-content").show();
+      } else {
+        $(".limited-content").hide();
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div class="main-container">
+  <div class="page-title">
+    <h2><strong>サークル紹介</strong></h2>
+  </div>
+
+  <div class="text">
+    <h3 class="h3">このサークルについて</h3>
+    <p>
+      このサークルは、2016年4月に<span style="color: #ff0000;">ポケモンについて語り合いたい</span>という目的で創設されました。
+      当サークルは、ポケモン対戦やポケモンカードゲームに興味がある方はもちろん、そうでない方も歓迎します。
+      是非一度、部会にお越しください！ <br><br>
+      また、当サークルは現在、非公認サークルですが、<span style="color: #ff0000;">2025年公認化予定</span>です！
+    </p>
+
+    <h3 class="h3">活動内容について</h3>
+    <p>
+      ポケモン好きが集まって、ポケモンゲームの対戦やポケモンカードで遊んだりします！また、中にはポケモンだけではなく、スマブラやスプラトゥーンなどをしている人もいます！<br>
+      また、定期的に他大学や<strong><a href="https://twitter.com/K_pokeunion" target="_blank" rel="noreferrer noopener" class="new-event">九州ポケサー連盟</a></strong>
+      主催の交流会も行っています！<br>
+      <strong><span style="color: #ff0000;">会費は部会1回参加あたり、100円です！</span></strong>
+      <span class="detail">（2025年に公認化した場合、減額予定）</span><br>
+      他サークルとの掛け持ちでの参加も大歓迎です！(実際に掛け持ちして参加する人もいます！)
+    </p>
+
+    <div class="limited-content"> <!-- 一定期間のみ表示 -->
+      <h3>新入生歓迎会について</h3>
+      <p>
+        トウカのもりでは、4月に新入生歓迎会を行います！内容は以下の通りです：<br>
+        <div class="event-details">
+          4月12日(金) ポケモンSV ゆびをふる大会 <br>
+          4月19日(金) ポケモンSV タイプ統一杯 <br>
+          4月26日(金) ポケモンSV マルチバトル大会
+          <div class="detail">
+            ※ポケモンカードは両日程通常の大会を行います。
+          </div>
+        </div>
+        <p>その他、詳しいルールなどの詳細は、<strong><a href="https://toukanomori.hatenablog.com/entry/2024/01/08/230031" target="_blank" rel="noreferrer noopener" class="new-event">こちら</a></strong>をご覧ください。</p>
+      </p>
+    </div>
+
+    <h3 class="h3">サークルへの加入方法</h3>
+    <p>
+      サークルへの加入方法は以下の通りです：<br> <br>
+      •1 <strong><a href="https://twitter.com/fukudai_pokemon" target='_blank' rel='noreferrer noopener' class="new-event">トウカのもり公式X</a></strong>よりDMで以下を記載し、加入の意思を伝えてください：
+      <div class="event-details">
+        ・名前(フルネーム)：<br>
+        ・学年、学部、学科：<br>
+        ・学籍番号：<br>
+        ・電話番号：
+      </div>
+      <p>確認が取れ次第、正式に加入となります！<br><br>
+        •2 実際にサークル活動に参加し、トウカのもり代表に加入の意思を伝えてください。
+        その後、上記の4項目（名前など）を確認の上、正式に加入となります！
+      </p>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

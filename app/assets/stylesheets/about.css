@@ -1,0 +1,94 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.text {
+    padding: 10px;
+}
+
+.detail {
+    font-size: x-small;
+}
+
+p {
+    padding: 20px 10px;
+}
+
+.new-event {
+    color: #1E90FF;
+}
+
+/* イベント詳細のスタイル */
+.event-details {
+    padding: 8px 5px 10px 15px;
+    margin: 10px 0 15px 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+}
+
+/* メディアクエリ: 画面幅が 768px 以下の場合 */
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 0.9em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .normal{
+        font-size: 0.8em;
+    }
+
+    .top, .bottom {
+        width: 100%; /* フル幅に広げる */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column; /* メニューを縦にスタッキング */
+        margin: 10px 0; /* 適切なマージンを設定 */
+    }
+
+    .top {
+        margin-bottom: 0px; /* サイドバーとメインコンテンツの間隔 */
+    }
+
+    .bottom {
+        margin: 10px 0; /* 適切なマージンを設定 */
+    }
+    
+    .normal{
+        padding: 0;
+    }
+    
+    .cicle {
+        margin-right: 0;
+        font-size: medium;
+    }
+    
+    .footer-text {
+        text-align: center;
+        font-size: 8px;
+    }
+
+    .event-details {
+        font-size: 14px;
+    }
+}

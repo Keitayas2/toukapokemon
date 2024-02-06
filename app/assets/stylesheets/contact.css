@@ -1,0 +1,35 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.text {
+    padding: 10px;
+}
+
+.detail {
+    font-size: x-small;
+}
+
+p {
+    padding: 20px 10px;
+}
+
+.new-event {
+    color: #1E90FF;
+}
+
+/* イベント詳細のスタイル */
+.event-details {
+    padding: 8px 5px 10px 15px;
+    margin: 10px 0 15px 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+}
