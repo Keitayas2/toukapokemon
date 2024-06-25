@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>よくあるご質問</title>
-  <!-- jQuery ライブラリを読み込む -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <!-- 期間内にのみ表示するための JavaScript コード -->
-  <script>
-    $(document).ready(function() {
-      var today = new Date();
-      var startDate = new Date('2024-01-07'); // 開始日
-      var endDate = new Date('2024-04-26');   // 終了日
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>よくあるご質問</title>
+    <!-- jQuery ライブラリを読み込む -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- 期間内にのみ表示するための JavaScript コード -->
+    <script>
+        $(document).ready(function() {
+        var today = new Date();
+        var startDate = new Date('2024-01-07'); // 開始日
+        var endDate = new Date('2024-04-26');   // 終了日
 
-      if (today >= startDate && today <= endDate) {
-        // 期間内の場合、指定の要素を表示
-        $(".limited-content").show();
-      } else {
-        // 期間外の場合、指定の要素を非表示
-        $(".limited-content").hide();
-      }
-    });
-  </script>
-  <!-- スタイルシートを読み込む（必要に応じて修正）-->
-  <%= stylesheet_link_tag 'QA', media: 'all' %>
+        if (today >= startDate && today <= endDate) {
+            // 期間内の場合、指定の要素を表示
+            $(".limited-content").show();
+        } else {
+            // 期間外の場合、指定の要素を非表示
+            $(".limited-content").hide();
+        }
+        });
+    </script>
+    <!-- スタイルシートを読み込む（必要に応じて修正）-->
+    <%= stylesheet_link_tag 'QA', media: 'all' %>
 </head>
 <body>
 
@@ -68,11 +68,11 @@
     </div>
 
     <div class="contact-box">
-        <h4>Q. サークル紹介によると会費が2025年に減額される予定とのことですが本当ですか？また、その理由について教えてください！</h4>
+        <h4>Q. サークル紹介によると会費が2025年に公認化すると書かれていますがなぜですか？また、その理由について教えてください！</h4>
     </div>
     <div class="text">
         <p>
-            はい。会費については2025年に減額予定です。これはサークルが公認されることにより、大学内の施設を使うことができ、現在の会場である城南市民センターを借りる必要がなくなるためです。ただし、当サイトの運営費のために多少は徴収する予定です。これによりメンバー全員がより気軽に参加できる環境を目指しています。
+            当サークルがについては2025年に公認化する理由としてサークル員を集めたいと言うものがあります。これはサークルが公認されることにより、大学内の施設を使うことができ、さらに認知度を上げて新入生や在校生に知ってもらいやすくなるためです。
         </p>
     </div>
 </div>

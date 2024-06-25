@@ -7,7 +7,7 @@ class ToukaController < ApplicationController
 
   end
 
-  def member
+  def circles
 
   end
 

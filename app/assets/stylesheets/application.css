@@ -1,3 +1,19 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
 /* 基本のスタイリング */
 * {
     padding: 0;
@@ -12,12 +28,17 @@ body {
 }
 
 #header {
+    margin : 0;
     padding: 10px 20px; /* 適切なパディングを設定 */
     text-align: center; /* テキストを中央に配置 */
+    background-color: #f2f2f2; /* ヘッダーの背景色（任意の色に変更） */
+    position: fixed;
+    width: 100%;
 }
 
 .main {
-    margin: 10px 20px; /* 適切なマージンを設定 */
+    margin: 0px 20px; /* 適切なマージンを設定 */
+    padding: 10px; /* 適切なパディングを設定 */
     display: flex;
     flex-direction: column; /* スマートフォンでは縦にスタッキング */
     overflow: hidden;
@@ -80,6 +101,7 @@ footer {
 @media screen and (max-width: 768px) {
     h4 {
         font-size: 0.9em;
+        margin-top: 40px;
     }
 
     .normal{
@@ -100,6 +122,7 @@ footer {
     }
 
     .top {
+        margin-top: 10px;
         margin-bottom: 0px; /* サイドバーとメインコンテンツの間隔 */
     }
 
@@ -137,8 +160,13 @@ footer {
         flex-direction: row; /* スマートフォン以外は横並びにする */
     }
 
+    .main-picture {
+        margin-top: 35px;
+    }
+
     .top {
         width: 25%; /* 左側のサイドバーの幅を設定（適宜調整） */
+        margin-top: 45px;
         margin-right: 5%; /* サイドバーとメインコンテンツの間隔 */
     }
 
@@ -150,5 +178,13 @@ footer {
         color: #333333;
         font-size: x-small;
         padding-bottom: 10px; /* フッターテキストと下のスペースを設定 */
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #header {
+        h2{
+            font-size: 0.7em;
+        }
     }
 }

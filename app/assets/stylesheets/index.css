@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center; /* 中央寄せ */
     padding: 20px; /* 必要に応じて調整 */
+    margin-top: 40px;
 }
 
 .main-picture{

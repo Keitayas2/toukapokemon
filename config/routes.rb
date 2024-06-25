@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'touka/about' => 'touka#about'
 
-  get 'touka/member' => 'touka#member'
+  get 'touka/circles' => 'touka#circles'
 
   get 'touka/QA' => 'touka#QA'
 
